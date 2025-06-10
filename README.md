@@ -23,3 +23,17 @@ A basic machine learning-powered detection mechanism is included as a proof of c
 - If the anomaly score exceeds the configured threshold, a security response is triggered
    - Notifications are sent via the configured Slack channel
    - System implements a 10-minute cooldown period to prevent alert spam
+
+**Running the demo**
+
+Currently, the DEMO lacks a dockerized solution, however, it can be set up with the following commands (if the basic requirements are met - PHP ver >= 8.2, Composer ver >= 2.0)
+```
+composer install
+php artisan migrate
+cd /public
+php -S localhost:8888
+```
+To process jobs:
+```
+php artisan queue:work
+```
