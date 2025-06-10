@@ -6,5 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Rule extends Model
 {
-    //
+    protected $fillable = [
+        'event_name',
+    ];
 }
